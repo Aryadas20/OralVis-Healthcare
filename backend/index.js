@@ -9,10 +9,10 @@ const db = require('./database.js');
 
 const app = express();
 
-// Middleware
-// Replace the simple app.use(cors()); with this:
+// This is the CORRECT code
 const corsOptions = {
-    origin: 'https://your-frontend-url.vercel.app', // Your Vercel frontend URL
+    // Add your local development origin and your future deployed origin
+    origin: ['http://localhost:5173', 'https://your-frontend-url.vercel.app'],
     optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
